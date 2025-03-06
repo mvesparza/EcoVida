@@ -1,0 +1,6 @@
+projectKey=Carrito-Compras
+serverUrl=http://localhost:9000
+serverVersion=25.1.0.102122
+dashboardUrl=http://localhost:9000/dashboard?id=Carrito-Compras
+ceTaskId=2e618ffc-38b4-4b52-b5aa-1fd9877b7929
+ceTaskUrl=http://localhost:9000/api/ce/task?id=2e618ffc-38b4-4b52-b5aa-1fd9877b7929

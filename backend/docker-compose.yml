@@ -1,0 +1,47 @@
+version: "3.8"
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:80"
+    networks:
+      - ecovida-network
+
+  usuarios:
+    build: ./usuarios
+    environment:
+      - POSTGRES_USER=usuarios_user
+      - POSTGRES_PASSWORD=rootroot
+      - POSTGRES_DB=EcoVida
+      - POSTGRES_HOST=localhost
+    ports:
+      - "3000:3000"
+    networks:
+      - ecovida-network
+
+  catalogo-productos:
+    build: ./catalogo-productos
+    networks:
+      - ecovida-network
+
+  mongo:
+    image: mongo:5
+    ports:
+      - "27017:27017"
+    networks:
+      - ecovida-network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - ecovida-network
+
+networks:
+  ecovida-network:
+    driver: bridge
+
+volumes:
+  postgres-data:

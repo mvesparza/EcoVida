@@ -1,0 +1,6 @@
+projectKey=Cat-logo-de-Producto
+serverUrl=http://localhost:9000
+serverVersion=25.1.0.102122
+dashboardUrl=http://localhost:9000/dashboard?id=Cat-logo-de-Producto
+ceTaskId=16ebe497-aeae-4d6e-8e19-2d8a92691e6d
+ceTaskUrl=http://localhost:9000/api/ce/task?id=16ebe497-aeae-4d6e-8e19-2d8a92691e6d

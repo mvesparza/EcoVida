@@ -1,0 +1,6 @@
+projectKey=Env-o-y-Log-stica
+serverUrl=http://localhost:9000
+serverVersion=25.1.0.102122
+dashboardUrl=http://localhost:9000/dashboard?id=Env-o-y-Log-stica
+ceTaskId=8e9ab4f8-2a40-460d-b6bc-2e260336912d
+ceTaskUrl=http://localhost:9000/api/ce/task?id=8e9ab4f8-2a40-460d-b6bc-2e260336912d

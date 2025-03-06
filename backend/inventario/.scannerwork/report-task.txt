@@ -1,0 +1,6 @@
+projectKey=Inventario
+serverUrl=http://localhost:9000
+serverVersion=25.1.0.102122
+dashboardUrl=http://localhost:9000/dashboard?id=Inventario
+ceTaskId=d3159484-bc55-427e-bada-5d9893efac36
+ceTaskUrl=http://localhost:9000/api/ce/task?id=d3159484-bc55-427e-bada-5d9893efac36

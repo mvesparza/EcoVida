@@ -1,0 +1,6 @@
+projectKey=Pedidos-Service
+serverUrl=http://localhost:9000
+serverVersion=25.1.0.102122
+dashboardUrl=http://localhost:9000/dashboard?id=Pedidos-Service
+ceTaskId=55969132-9137-4e07-b5f2-cc56e8c5d243
+ceTaskUrl=http://localhost:9000/api/ce/task?id=55969132-9137-4e07-b5f2-cc56e8c5d243
