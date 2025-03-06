@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap');
+
+/* 🎨 Ocultamos el cursor predeterminado en TODA la página */
+body,
+a, button, input, textarea {
+  cursor: none !important;
+}
+
+/* 🌿 Cursor Personalizado */
+.custom-cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  background: radial-gradient(circle, rgba(118, 176, 65, 0.8) 10%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, border-color 0.2s ease-in-out;
+  z-index: 9999;
+}
+
+/* ✨ Resplandor del cursor */
+.cursor-glow {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, rgba(118, 176, 65, 0.3) 0%, transparent 80%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, opacity 0.2s;
+  z-index: 9998;
+}
+
+/* 🌟 Expansión del cursor en elementos interactivos */
+.custom-cursor.hovering {
+  width: 30px;
+  height: 30px;
+  border-color: #76B041; /* Verde vibrante */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* 🔥 Partículas dinámicas */
+.custom-cursor::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 80%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  animation: particleMovement 1.5s infinite alternate ease-in-out;
+}
+
+/* ✨ Animación de partículas flotantes */
+@keyframes particleMovement {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(-50%, -60%) scale(1.3);
+    opacity: 1;
+  }
+}

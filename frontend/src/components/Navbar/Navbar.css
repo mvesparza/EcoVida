@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* 🌿 Navbar con diseño elegante */
+.custom-navbar {
+  background: #ffffff; /* Fondo blanco limpio */
+  padding: 15px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-animate:hover {
+  transform: scale(1.1);
+}
+
+/* 🟢 Enlaces con tipografía elegante y colores modernos */
+.navbar-nav {
+  font-family: 'Poppins', sans-serif;
+}
+
+.animated-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #155e3d; /* Verde sofisticado */
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.animated-link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #155e3d; /* Verde principal */
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-link:hover {
+  color: #0f3d2e; /* Verde más oscuro */
+}
+
+.animated-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* 🟡 Animación de hover en enlaces */
+.animated-link:hover {
+  color: #ffb703; /* Amarillo dorado elegante */
+}
+
+/* 📱 Responsivo para móviles */
+@media (max-width: 768px) {
+  .animated-link {
+    text-align: center;
+    display: block;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Raleway:wght@300;400;600&display=swap');
+
+/* 🌍 Hero Section */
+.hero-section {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🎥 Swiper */
+.hero-carousel {
+  width: 100%;
+  height: 100%;
+}
+
+/* 🌄 Slides */
+.hero-slide {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🖼️ Imagen con efecto de zoom */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 6s ease-in-out;
+}
+
+.swiper-slide-active .hero-image {
+  transform: scale(1.15);
+}
+
+/* 🌟 Texto Fijo del Hero */
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 60px;
+  border-radius: 10px;
+  max-width: 60%;
+  animation: fadeInOnce 1.5s ease-in-out;
+}
+
+/* 🎨 Tipografías Elegantes */
+.hero-content h1 {
+  font-family: 'Lora', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 15px;
+  opacity: 0.9;
+  color: #f0f0f0;
+}
+
+/* 🎨 Nueva Paleta de Colores */
+.highlight {
+  color: #76B041;
+}
+
+/* 🎬 Botón Estilizado */
+.btn.pulse {
+  background-color: #76B041;
+  color: #ffffff;
+  border: none;
+  font-size: 1.3rem;
+  padding: 14px 30px;
+  border-radius: 30px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.btn.pulse:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(118, 176, 65, 0.5);
+}
+
+/* 🔄 Swiper - Paginación */
+.swiper-pagination-bullet {
+  background: #76B041 !important;
+  width: 14px;
+  height: 14px;
+  opacity: 0.9;
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+/* 🎯 Botones de navegación personalizados */
+.swiper-button-next, 
+.swiper-button-prev {
+  color: white !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-button-next:hover, 
+.swiper-button-prev:hover {
+  transform: scale(1.2);
+}
+
+/* 🌟 Animación de aparición solo una vez */
+@keyframes fadeInOnce {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

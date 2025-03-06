@@ -1,0 +1,196 @@
+/* 📌 Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* 🌟 Estilo general del carrito */
+.cart-page {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+}
+
+/* 📦 Contenedor de los productos en el carrito */
+.cart-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* 🛒 Tarjeta de producto en el carrito */
+.cart-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.cart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* 🖼 Imagen del producto */
+.cart-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cart-card img:hover {
+    transform: scale(1.05);
+}
+
+/* 📜 Información del producto */
+.cart-info {
+    margin-top: 10px;
+}
+
+.cart-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.cart-info p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin: 5px 0;
+}
+
+/* 💰 Precio y subtotal */
+.cart-info strong {
+    color: #155e3d;
+    font-weight: 600;
+}
+
+/* 💲 Precio total */
+.total-price {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #155e3d;
+}
+
+/* 🔢 Controles de cantidad */
+.cart-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.cart-quantity button {
+    background: #e1e39a;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.cart-quantity button:hover {
+    background: #f6ff00;
+    transform: scale(1.1);
+}
+
+.cart-quantity span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* ❌ Botón de eliminar */
+.remove-btn {
+    background-color: #ff3b3b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.2s;
+    font-size: 1rem;
+}
+
+.remove-btn:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* 🔙 Botón para volver atrás */
+.back-btn {
+    margin-top: 30px;
+    background-color: #155e3d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #0f3d2e;
+    transform: scale(1.05);
+}
+
+/* 🎭 Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🖥 Responsive - Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .cart-items-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-card {
+        width: 90%;
+    }
+}
+
+.pedido-btn {
+    background-color: #155e3d;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+}
+
+.pedido-btn:hover {
+    background-color: #0f4a2c;
+    transform: translateY(-2px); /* Efecto de levantamiento */
+}
+
+.pedido-btn:active {
+    transform: translateY(0); /* Vuelve al nivel base al hacer clic */
+}
+
+.pedido-btn::before {
+    content: '📦'; /* Ícono antes del texto */
+    font-size: 18px;
+}
+

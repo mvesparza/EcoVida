@@ -1,0 +1,121 @@
+/* 🔹 Fondo oscuro con desenfoque al abrir modal */
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* 🌟 Modal elegante */
+  .auth-modal {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    animation: slideDown 0.3s ease-in-out;
+  }
+  
+  /* 📝 Estilos de texto */
+  .auth-modal h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #155e3d;
+  }
+  
+  .auth-error {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  /* 📌 Campos de entrada estilizados */
+  .auth-modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .auth-modal input:focus {
+    border-color: #76B041;
+    outline: none;
+  }
+  
+  /* 🎬 Botón estilizado */
+  .auth-btn {
+    background: #76B041;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  .auth-btn:hover {
+    background: #5a8f34;
+    transform: scale(1.05);
+  }
+  
+  /* 🔄 Cambio entre Login y Registro */
+  .auth-switch {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .auth-switch span {
+    color: #76B041;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .auth-switch span:hover {
+    color: #155e3d;
+  }
+  
+  /* ❌ Botón de cerrar */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .close-btn:hover {
+    color: #ff3b3b;
+  }
+  
+  /* 🔥 Animaciones */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

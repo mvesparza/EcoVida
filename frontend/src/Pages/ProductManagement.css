@@ -1,0 +1,540 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Contenedor de pestañas */
+.tab-header {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 15px;
+}
+
+.tab-header button {
+    background: none;
+    border: 2px solid #155e3d;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #155e3d;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.tab-header button:hover, 
+.tab-header button.active {
+    background: #155e3d;
+    color: white;
+}
+
+/* Contenedor de productos */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Botón de agregar producto */
+.new-btnP {
+    background: #3e8e41;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.new-btnP:hover {
+    background: #2e5a2e;
+    transform: scale(1.05);
+}
+
+/* Formulario de productos */
+.product-form {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.product-form h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.product-form input,
+.product-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.product-form input:focus,
+.product-form select:focus {
+    border-color: #3e8e41;
+    outline: none;
+}
+
+.product-form button {
+    background: #3e8e41;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-form button:hover {
+    background: #2e5a2e;
+    transform: scale(1.05);
+}
+
+.product-form .cancel-btn {
+    background: #d32f2f;
+    margin-top: 10px;
+}
+
+.product-form .cancel-btn:hover {
+    background: #b71c1c;
+}
+
+/* Contenedor de tarjetas de productos */
+.product-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card .actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.product-card .actions button:hover {
+    transform: scale(1.05);
+}
+
+.product-card .delete-btn {
+    background: #f44336;
+}
+
+.product-card .delete-btn:hover {
+    background: #d32f2f;
+}
+
+/* Animación FadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Formulario de edición de productos */
+.edit-product-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 30px auto;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.edit-product-form h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+}
+
+.edit-product-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.edit-product-form input:focus {
+    border-color: #3e8e41;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Contenedor de botones con mejor disposición */
+.edit-product-form .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.edit-product-form button {
+    flex: 1;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.edit-product-form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+.edit-product-form button[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.edit-product-form button[type="button"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+.edit-product-form button[type="button"]:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 480px) {
+    .edit-product-form {
+        padding: 20px;
+    }
+
+    .edit-product-form h3 {
+        font-size: 22px;
+    }
+
+    .edit-product-form .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .edit-product-form button {
+        width: 100%;
+    }
+}
+
+/* 📌 Estilos para el formulario de edición de categoría */
+.edit-category-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 30px auto;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.edit-category-form h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+}
+
+.edit-category-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.edit-category-form input:focus {
+    border-color: #3e8e41;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Contenedor de botones con mejor disposición */
+.edit-category-form .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.edit-category-form button {
+    flex: 1;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.edit-category-form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+.edit-category-form button[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.edit-category-form button[type="button"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+.edit-category-form button[type="button"]:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* 📂 Estilos para la Gestión de Categorías */
+.category-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 30px auto;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.category-form h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+}
+
+.category-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.category-form input:focus {
+    border-color: #3e8e41;
+    outline: none;
+    background-color: #fff;
+}
+
+/* 📌 Botón para agregar nueva categoría */
+.new-btn {
+    background-color: #218838;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.new-btn:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+}
+
+/* 📌 Lista de Categorías */
+.categories-list-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categories-list {
+    list-style: none;
+    padding: 0;
+}
+
+.categories-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.categories-list li:hover {
+    background: #ececec;
+}
+
+/* 📌 Botones de acción en la lista */
+.categories-list button {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Estilo del botón de edición */
+.edit-btn {
+    background-color: #dbdbdb;
+    color: #333;
+    margin-right: 8px;
+}
+
+.edit-btn:hover {
+    background-color: #bebebe;
+    transform: translateY(-2px);
+}
+
+
+/* 📌 Responsividad */
+@media (max-width: 480px) {
+    .category-form {
+        padding: 20px;
+    }
+
+    .categories-list-container {
+        padding: 15px;
+    }
+
+    .categories-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .categories-list li div {
+        margin-top: 10px;
+    }
+
+    .categories-list button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+/* 📌 Botón único para "Crear Categoría" */
+.create-category-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.create-category-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.create-category-btn:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}

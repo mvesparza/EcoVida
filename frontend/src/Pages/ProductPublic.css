@@ -1,0 +1,136 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* 🎨 Estilos generales de la página */
+.product-listing-page {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    background: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* 📌 Estilos del menú lateral */
+.sidebar {
+    width: 250px;
+    background: #155e3d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar button:hover, .sidebar button.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 📌 Botón para regresar al perfil */
+.profile-btn {
+    background: white;
+    color: #155e3d;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-btn:hover {
+    background: #e6e6e6;
+}
+
+/* 📂 Submenú de categorías */
+.category-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 10px;
+}
+
+.category-submenu li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.category-submenu li:hover, .category-submenu li.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* 📌 Contenedor principal */
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    text-align: center;
+}
+
+/* 🛍 Título */
+.content h2 {
+    font-size: 28px;
+    color: #155e3d;
+    margin-bottom: 20px;
+}
+
+/* 📦 Contenedor de tarjetas de productos */
+.product-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 🎴 Tarjeta de producto */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 250px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🖼 Imagen del producto */
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* 📌 Información del producto */
+.product-info h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 🚀 Mensajes cuando no hay productos */
+.no-products {
+    font-size: 16px;
+    color: #888;
+    margin-top: 20px;
+}

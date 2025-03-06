@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* 🌿 Estilo para la barra de navegación */
+.profile-navbar {
+    background: #155e3d;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Asegura que el contenido se ajuste bien */
+}
+
+/* 🌿 Marca EcoVida */
+.brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+/* 📌 Contenedor de enlaces */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/* 🔗 Estilos de los enlaces */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0; /* Asegura que no haya márgenes no deseados */
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 8px 15px;
+    border-radius: 6px;
+    min-width: 130px; /* Establece un ancho mínimo para los botones */
+    text-align: center;
+}
+
+.nav-links button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 🔥 Animación del botón activo */
+.nav-links button:active {
+    transform: scale(0.95);
+}
+
+/* 🚀 Botón de Cerrar Sesión alineado a la derecha */
+.logout-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    min-width: 130px; /* Para igualar el tamaño con los botones del menú */
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background: #c62828;
+    transform: scale(1.05);
+}
+
+/* 🌟 Responsividad */
+@media (max-width: 768px) {
+    .profile-navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logout-btn {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Montserrat:wght@300;400;600&display=swap');
+
+/* 🌿 Footer */
+.footer {
+  background: #2C3E50; /* Azul oscuro elegante */
+  color: #BDC3C7; /* Gris claro */
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px; /* Altura inicial */
+  transition: height 0.4s ease-in-out;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 🌟 Expansión del footer */
+.footer.expanded {
+  height: 400px; /* Más espacio para que todo sea visible */
+}
+
+/* 📢 Mensaje Motivador */
+.footer-preview {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+  color: #76B041; 
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footer-arrow {
+  animation: bounce 1s infinite alternate;
+}
+
+/* 🔥 Efecto de rebote en la flecha */
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+/* 📌 Contenido Completo */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ✨ Aparecer contenido al expandirse */
+.footer.expanded .footer-container {
+  opacity: 1;
+}
+
+/* 🌱 Secciones */
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 📌 Sección del mapa más grande */
+.map-section {
+  flex: 2;
+  text-align: center;
+}
+
+/* 📌 Títulos */
+.footer-section h4 {
+  font-size: 1.6rem;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 10px;
+  color: #76B041; 
+}
+
+/* 📢 Redes sociales */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #E74C3C;
+  transform: scale(1.2);
+}
+
+/* 🚀 Derechos reservados */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #BDC3C7;
+  padding: 5px;
+}

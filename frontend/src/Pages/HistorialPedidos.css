@@ -1,0 +1,116 @@
+/* 📌 Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+
+/* Estilo general de la página */
+.historial-page {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título principal */
+.historial-page h2 {
+    color: #155e3d;
+    margin-bottom: 15px;
+}
+
+/* Botón de volver al perfil */
+.back-btnHP {
+    background-color: #155e3d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.back-btnHP:hover {
+    background-color: #0f4a2c;
+}
+
+/* Lista de pedidos */
+.pedidos-list {
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo individual de cada pedido */
+.pedido-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #155e3d;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.3s ease;
+}
+
+.pedido-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Texto de cada pedido */
+.pedido-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Sección de acciones: confirmar/cancelar */
+.pedido-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Botones de confirmar y cancelar */
+.confirm-btn, .cancel-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Botón confirmar */
+.confirm-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.confirm-btn:hover {
+    background-color: #218838;
+}
+
+/* Botón cancelar */
+.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+}
+
+/* Mensaje de "No hay pedidos" */
+.historial-page p {
+    color: #666;
+    font-size: 16px;
+}

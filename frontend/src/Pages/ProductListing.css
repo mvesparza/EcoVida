@@ -1,0 +1,124 @@
+/* 📌 Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* 📌 Estilos generales */
+.product-listing-page {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    background: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* 📌 Menú lateral fijo */
+.sidebar {
+    position: fixed; /* 🔗 Fija el menú al lado izquierdo */
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background: #155e3d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000; /* Asegúrate que esté sobre el contenido */
+}
+
+/* 📌 Ajusta el contenedor principal para dejar espacio a la sidebar */
+.product-listing-page {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    background: #f4f4f4;
+    min-height: 100vh;
+    margin-left: 250px; /* Compensa el ancho de la sidebar */
+}
+
+/* 📌 Contenido principal adaptado */
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    text-align: center;
+}
+
+
+/* 📌 Contenedor de botones del menú */
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* 📌 Botones del menú */
+.sidebar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar button:hover, .sidebar button.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 📌 Botón "Ir al Carrito" al fondo */
+.cart-btn {
+    background: white;
+    color: #155e3d;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    margin-top: auto;
+}
+
+.cart-btn:hover {
+    background: #e6e6e6;
+}
+
+/* 📌 Contenido principal */
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    text-align: center;
+}
+
+/* 📦 Tarjetas de productos */
+.product-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 📌 Tarjeta de producto */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* 📌 Botón "Agregar al Carrito" */
+.add-to-cart-btn {
+    background: #155e3d;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #0f3d2e;
+}
